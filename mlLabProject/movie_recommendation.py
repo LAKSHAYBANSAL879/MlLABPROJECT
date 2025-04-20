@@ -8,7 +8,7 @@ from io import BytesIO
 from PIL import Image
 
 
-df = pd.read_csv("./movies.csv")
+df = pd.read_csv('movies.csv')
 
 
 def recommend_movies(movie_name, df):
