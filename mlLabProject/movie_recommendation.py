@@ -8,7 +8,7 @@ from io import BytesIO
 from PIL import Image
 
 
-df = pd.read_csv("mlLabProject/movies.csv")
+df = pd.read_csv("movies.csv")
 
 
 def recommend_movies(movie_name, df):
@@ -92,10 +92,10 @@ if st.button("Get Recommendations"):
                             </div>
                             <div>
                                 <h3 style="color: #e5e5e5; margin: 0;">{title}</h3>
-                                <p style="color: #cccccc;"><strong>Genre:</strong> {genre}</p>
+                                <p style="color: #cccccc;"><strong>Genre:</strong> {', '.join(genre.split(' '))}</p>
                                 <p style="color: #cccccc;"><strong>Tagline:</strong> {tagline}</p>
                                 <p style="color: #cccccc;"><strong>Director:</strong> {director}</p>
-                                <p style="color: #cccccc;"><strong>Cast:</strong> {cast.join(',')}</p>
+                                <p style="color: #cccccc;"><strong>Cast:</strong> {', '.join(cast.split(' '))}</p>
                             </div>
                         </div>
                     </div>
